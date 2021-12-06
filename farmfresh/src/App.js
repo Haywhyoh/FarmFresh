@@ -1,36 +1,28 @@
-import React from 'react'
+import React, {Component} from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 
 function App() {
   return (
-    <nav className="navbar navbar-light bg-light">
-      <ul className="nav nav-tabs">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">FreshFarm</a>
-      </div>
-
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home">FarmFresh</Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="me-auto">
+        
       
-  <li className="nav-item">
-    <a className="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li className="nav-item dropdown">
-    <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-    <ul className="dropdown-menu">
-      <li><a className="dropdown-item" href="#">Action</a></li>
-      <li><a className="dropdown-item" href="#">Another action</a></li>
-      <li><a className="dropdown-item" href="#">Something else here</a></li>
-      <li><hr className="dropdown-divider" /></li>
-      <li><a className="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
-    </nav>
-    
+       
+      </Nav>
+      <Nav>
+        <Nav.Link href="#deets">Login</Nav.Link>
+        <Nav.Link eventKey={2} href="#memes">
+          Get Started
+        </Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+    </Container>
+    </Navbar>
   );
 }
 
