@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
+import Categories from './dropdata'
+
 
 function App() {
   return (
